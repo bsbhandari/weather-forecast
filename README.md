@@ -38,10 +38,10 @@ Develop a weather forecast app. Your application should fetch weather forecast f
 
 [API'S]
 * Get Weather For Current City
-http://api.openweathermap.org/data/2.5/weather?q=London&appid=048c43a2f7e00f37c3b4044df2ec3128
+http://api.openweathermap.org/data/2.5/weather?q=London&appid=*********
 
 * Get Weather for 5 days / 3 hour forecast data for each day
-http://api.openweathermap.org/data/2.5/forecast?q=London&appid=048c43a2f7e00f37c3b4044df2ec3128
+http://api.openweathermap.org/data/2.5/forecast?q=London&appid=********
 
 * Get Weather for 16 days / 1 forecsat per day
-http://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=16&appid=048c43a2f7e00f37c3b4044df2ec3128
+http://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=16&appid=********
