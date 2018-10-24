@@ -14,40 +14,131 @@ body {
   cursor: pointer;
 }
 
-.custom-spinner-color{
-  color: black;
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 1px 0px 46px #359fb9;
+    border-radius: 5px;
+    .current-weather-wrapper{
+        height: 100vh;
+        width:35%;
+        padding: 20px;
+        float: left;
+        background: #efe7e7; /* Old browsers */
+        background: -moz-linear-gradient(top, #efe7e7 0%, #eee6e6 0%, #c1e1cd 0%, #5ecd90 1%, #5dcc92 13%, #58c697 29%, #359fb9 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #efe7e7 0%,#eee6e6 0%,#c1e1cd 0%,#5ecd90 1%,#5dcc92 13%,#58c697 29%,#359fb9 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #efe7e7 0%,#eee6e6 0%,#c1e1cd 0%,#5ecd90 1%,#5dcc92 13%,#58c697 29%,#359fb9 100%);
+    }
+    .router-outlet-wrapper{
+      float: left;
+        width: 65%;
+        padding: 20px;
+        height: 100vh;
+         box-shadow: 1px 0px 46px #359fb9;
+          .mat-tab-link.active {
+                border-bottom: 3px solid #5ecd90;
+            }
+            
+            .roulet-container{
+                padding:10px;
+            }
+    }
+        app-day-cloud{
+    display: inline-flex;
+  } 
 }
+
+.current-date{
+    text-align: left;
+    color: #FFF;
+    padding: 40px 0 0 40px;
+}
+
+.current-temperature{
+     color: #FFF;
+     position: absolute;
+     bottom: 10px;
+    .temperature{
+        text-align: start;
+        font-size: 9em;
+    }
+    .city-name{ 
+        text-align: center;
+         font-size: 1em;
+    }
+}
+
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (max-width: 767px) {
-  .container{
-    
+   .current-temperature{
+      .temperature{
+          font-size: 6em;
+      }
   }
+
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
- .container{
-    
+@media only screen and (max-width: 480px) {
+    .container{
+      .current-weather-wrapper{
+            width:100%;
+            padding: 20px;
+            height: auto;
+      }
+      .current-date{
+        padding:10px;
+          text-align: center;
+          color: #FFF;
+       }
+       .current-temperature {
+       color: #FFF;
+        position: relative;
+         .temperature{
+           text-align: center;
+          font-size: 3em;
+          }
+        }
+        .mat-form-field{
+          width:100%;
+        }
+      .router-outlet-wrapper{
+        float: left;
+          width: 100%;
+          padding: 20px;
+          box-shadow: 1px 0px 46px #359fb9;
+            .mat-tab-link.active {
+                  border-bottom: 3px solid #5ecd90;
+              }
+            
+              .roulet-container{
+                  padding:10px;
+              }
+      }
   }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
- .container{
-
+  .current-temperature{
+      .temperature{
+          font-size: 6em;
+      }
   }
+  app-day-cloud{
+    display: inline-flex;
+  } 
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
- .container{
-    
+  .current-temperature{
+      .temperature{
+          font-size: 4em;
+      }
   }
-}
-
-/*********Ultra HD **********/
-@media only screen and (min-width: 1280px) {
-.container{
+    app-day-cloud{
+    display: inline-flex;
   }
 }

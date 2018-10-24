@@ -6,7 +6,8 @@
         <div class="search-field">
             <form [formGroup]="searchLocationForm">
                 <mat-form-field>
-                    <input matInput placeholder="Enter Location" [formControl]="location">
+                    <input matInput placeholder="Enter Location" (keyup.enter)="location.value?search():''"
+                        [formControl]="location">
                     <mat-icon matSuffix (click)="location.value?search():''">
                         <i *ngIf="!isDataLoding" class="mdi mdi-magnify cursor-pointer"></i>
                     </mat-icon>
@@ -18,9 +19,7 @@
         <div *ngIf="message">
             {{message}}
         </div>
-        <div class="show-clouds">
-            <app-day-cloud [weatherData]="weatherData"></app-day-cloud>
-        </div>
+        <app-day-cloud [weatherData]="weatherData"></app-day-cloud>
         <nav mat-tab-nav-bar>
             <a mat-tab-link routerLink="/today" routerLinkActive #rla1="routerLinkActive" ngClass="{{rla1.isActive?'active':''}}">
                 Today </a>

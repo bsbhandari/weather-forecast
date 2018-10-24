@@ -7,7 +7,7 @@ import { WeatherForecastService } from '../weather-forecast/weather-forecast.ser
   styleUrls: ['./week-weather.component.scss']
 })
 export class WeekWeatherComponent implements OnInit {
-  weekData: [];
+  weekData = [];
   constructor(private weatherForecastService: WeatherForecastService) {
     this.weatherForecastService.weatherData.subscribe((value) => {
       this.weatherForecastService.weatherData.subscribe((value) => {

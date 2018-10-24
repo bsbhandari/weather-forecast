@@ -1,0 +1,13 @@
+.day-chip{
+    div{
+        padding:10px;
+        background: #efe7e7; /* Old browsers */
+        background: -moz-linear-gradient(top, #efe7e7 0%, #eee6e6 0%, #c1e1cd 0%, #5ecd90 1%, #5dcc92 13%, #58c697 29%, #359fb9 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #efe7e7 0%,#eee6e6 0%,#c1e1cd 0%,#5ecd90 1%,#5dcc92 13%,#58c697 29%,#359fb9 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #efe7e7 0%,#eee6e6 0%,#c1e1cd 0%,#5ecd90 1%,#5dcc92 13%,#58c697 29%,#359fb9 100%);
+        min-width: 80px;
+        border-radius: 10px;
+        margin: 5px;
+        float: left;
+    }
+}

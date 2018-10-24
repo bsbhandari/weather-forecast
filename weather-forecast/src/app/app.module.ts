@@ -11,10 +11,9 @@ import {
   MatInputModule,
   MatProgressBarModule,
   MatListModule,
-  MatProgressSpinnerModule,
   MatIconModule,
   MatExpansionModule,
-  MatTabsModule
+  MatTabsModule,
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -25,7 +24,7 @@ export const MaterialModules = [
   MatIconModule,
   MatProgressBarModule,
   MatListModule,
-  MatExpansionModule
+  MatExpansionModule,
 ];
 
 @NgModule({
