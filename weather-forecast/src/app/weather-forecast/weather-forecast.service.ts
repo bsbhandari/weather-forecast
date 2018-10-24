@@ -9,6 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 export class WeatherForecastService {
 
   cityName = new BehaviorSubject<any>('');
+  //behaviour object so component is listing it for change.
   weatherData = new BehaviorSubject<any>(undefined);
 
   constructor(private httpClient: HttpClient) {
@@ -27,10 +28,10 @@ export class WeatherForecastService {
   }
 
   getCityWeatherData(cityName: string) {
-    return this.httpClient.get('http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + environment.apiKey);
+    return this.httpClient.get('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=' + environment.apiKey);
   }
 
   getCityDailyWeather(cityName) {
-    return this.httpClient.get('http://api.openweathermap.org/data/2.5/forecast/daily?units=metric&cnt=16&q=' + cityName + '&appid=' + environment.apiKey);
+    return this.httpClient.get('https://api.openweathermap.org/data/2.5/forecast/daily?units=metric&cnt=16&q=' + cityName + '&appid=' + environment.apiKey);
   }
 }
