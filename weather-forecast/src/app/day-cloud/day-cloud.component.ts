@@ -13,7 +13,7 @@ export class DayCloudComponent implements OnInit {
   constructor(private weatherForecastService: WeatherForecastService) {
     this.weatherForecastService.weatherData.subscribe((value) => {
       if (value)
-        this.weekData = value.slice(0, 7);
+        this.weekData = value.slice(0, 5);
     });
   }
 

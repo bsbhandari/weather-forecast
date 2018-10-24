@@ -8,7 +8,7 @@ import { WeatherForecastService } from '../weather-forecast/weather-forecast.ser
 })
 export class MonthWeatherComponent implements OnInit {
 
-  monthData: [];
+  monthData = [];
   constructor(private weatherForecastService: WeatherForecastService) {
     this.weatherForecastService.weatherData.subscribe((value) => {
       if (value)

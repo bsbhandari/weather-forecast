@@ -24,21 +24,3 @@ $weather-light: mat-light-theme($light-theme-primary, $light-theme-accent, $ligh
 .weather-dark {
   @include angular-material-theme($weather-dark);
 }
-
-$bodycolor: #f2f3f4;
-$default-color: #777777;
-$orange: #ff5722;
-$orange-secondary: #e43700;
-$white: #FFFFFF;
-$black: #000000;
-$primary: #2196F3;
-$lightgray: #F6F5F3;
-$darkgray: #1f1f1f;
-$gray: #E8E7E4;
-$darkred: #8B0000;
-$gold: #FFD700;
-$indigo: #4B0082;
-$green: #008000;
-$lightseagreen: #20B2AA;
-$aqua: #00FFFF;
-
