@@ -1,0 +1,14 @@
+<div class="current-weather">
+  <div class="current-date">
+    {{todayDate | date: 'mediumDate'}}
+  </div>
+  <div class="current-temperature">
+    <div class="temperature">
+      {{weatherData && weatherData.main && weatherData.main.temp ? getTempratureInCelcius(weatherData.main.temp): ''}}
+      <span *ngIf="weatherData && weatherData.main && weatherData.main.temp">&deg;</span>
+    </div>
+    <div class="city-name">
+      {{weatherData?weatherData.name:''}}
+    </div>
+  </div>
+</div>

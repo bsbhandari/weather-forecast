@@ -1,0 +1,7 @@
+<div *ngFor="let item of weekData">
+    <i class="{{getClass(item)}}"> </i>
+    <br>
+    <span>
+        {{item.dateValue | date: 'EEEE'}}
+    </span>
+</div>
