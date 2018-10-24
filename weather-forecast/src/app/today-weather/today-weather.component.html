@@ -1,0 +1,7 @@
+<mat-list role="list" *ngIf="todayData && todayData.temp">
+  <mat-list-item role="listitem">day : {{todayData.temp.day}}</mat-list-item>
+  <mat-list-item role="listitem">min : {{todayData.temp.min}}</mat-list-item>
+  <mat-list-item role="listitem">max : {{todayData.temp.max}}</mat-list-item>
+  <mat-list-item role="listitem">night : {{todayData.temp.night}}</mat-list-item>
+  <mat-list-item role="listitem">eve : {{todayData.temp.eve}}</mat-list-item>
+</mat-list>

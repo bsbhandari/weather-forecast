@@ -8,7 +8,7 @@ var filesToCache = [
   '/main.js',
   '/styles.js',
   '/runtime.js',
-  'https://fonts.googleapis.com/icon?family=Material+Icons'
+  'https://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css'
 ];
 
 self.addEventListener('install', function (e) {

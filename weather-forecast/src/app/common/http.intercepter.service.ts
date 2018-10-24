@@ -10,8 +10,8 @@ export class MyHttpInterceptor implements HttpInterceptor {
     // Used for intercept the request and response
     // Used to handle common errors for api's
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        request = request.clone({ setHeaders: { 'Content-Type': 'application/json' } });
-        request.params.set('appid', environment.apiKey); //setting api key
+        // request = request.clone({ setHeaders: { 'Content-Type': 'application/json' } });
+        // request.params.set('appid', environment.apiKey); //setting api key
         return next.handle(request).pipe(
             tap(event => { }, error => {
                 if (error.status === 401 || error.status === 403) {

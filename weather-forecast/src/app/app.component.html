@@ -1,20 +1,36 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+    <div class="current-weather-wrapper">
+        <app-current-weather [weatherData]="weatherData"></app-current-weather>
+    </div>
+    <div class="router-outlet-wrapper">
+        <div class="search-field">
+            <form [formGroup]="searchLocationForm">
+                <mat-form-field>
+                    <input matInput placeholder="Enter Location" [formControl]="location">
+                    <mat-icon matSuffix (click)="location.value?search():''">
+                        <i *ngIf="!isDataLoding" class="mdi mdi-magnify cursor-pointer"></i>
+                    </mat-icon>
+                    <mat-progress-bar *ngIf="isDataLoding" mode="indeterminate"></mat-progress-bar>
+                    <mat-error *ngIf="location.hasError('required')">Please enter search value</mat-error>
+                </mat-form-field>
+            </form>
+        </div>
+        <div *ngIf="message">
+            {{message}}
+        </div>
+        <div class="show-clouds">
+            <app-day-cloud [weatherData]="weatherData"></app-day-cloud>
+        </div>
+        <nav mat-tab-nav-bar>
+            <a mat-tab-link routerLink="/today" routerLinkActive #rla1="routerLinkActive" ngClass="{{rla1.isActive?'active':''}}">
+                Today </a>
+            <a mat-tab-link routerLink="/week" routerLinkActive #rla2="routerLinkActive" ngClass="{{rla2.isActive?'active':''}}">
+                Week </a>
+            <a mat-tab-link routerLink="/month" routerLinkActive #rla3="routerLinkActive" ngClass="{{rla3.isActive?'active':''}}">
+                Month </a>
+        </nav>
+        <div class="roulet-container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
