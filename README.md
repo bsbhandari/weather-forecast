@@ -35,3 +35,13 @@ Develop a weather forecast app. Your application should fetch weather forecast f
 [Important]
 * IMPORTANT: Commit code intervally.
 * Share the git repo with the recruiter you are in contact with when you are done.
+
+[API'S]
+* Get Weather For Current City
+http://api.openweathermap.org/data/2.5/weather?q=London&appid=048c43a2f7e00f37c3b4044df2ec3128
+
+* Get Weather for 5 days / 3 hour forecast data for each day
+http://api.openweathermap.org/data/2.5/forecast?q=London&appid=048c43a2f7e00f37c3b4044df2ec3128
+
+* Get Weather for 16 days / 1 forecsat per day
+http://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=16&appid=048c43a2f7e00f37c3b4044df2ec3128
