@@ -3,6 +3,7 @@ import { of, BehaviorSubject } from 'rxjs';
 export class SpyWeatherForecastServiceService {
     cityName = new BehaviorSubject<any>('');
     weatherData = new BehaviorSubject<any>('');
+
     getCityWeatherData = jasmine
         .createSpy('getCityWeatherData')
         .and.callFake(() => asyncData(Object.assign({})));

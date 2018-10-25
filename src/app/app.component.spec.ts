@@ -18,9 +18,6 @@ describe('AppComponent', () => {
         AppComponent, routingComponents
       ],
       providers: [
-        { provide: ActivatedRoute, useValue: {} },
-        { provide: HttpClient, useValue: {} },
-        { provide: Router, useValue: {} },
         { provide: WeatherForecastService, useClass: SpyWeatherForecastServiceService }
       ],
       imports: [RouterTestingModule, ReactiveFormsModule, MaterialModules, RouterModule]
