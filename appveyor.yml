@@ -13,7 +13,10 @@
     - cmd: git config --global core.autocrlf true
   # Test against the latest version of this Node.js version
   environment:
-    nodejs_version: "8.11.1"        
+    nodejs_version: "8.11.1"  
+    
+    websiteName: weatherforecastdev01
+    artifactName: weatherforecastdev01
     
   # Install scripts. (runs after repo cloning)
   install:
@@ -31,11 +34,24 @@
   after_build:
    # for once the build has completed
   artifacts:
+    - path: '\dist'
+      name: $(artifactName)
+      type: WebDeployPackage
+   
     
    
   clone_depth: 1
   on_finish:
     # any cleanup in here
+  deploy:
+    - provider: WebDeploy
+      server: https://%websiteName%.scm.azurewebsites.net:443/msdeploy.axd?site=%websiteName%
+      website: $(websiteName)
+      username: bsbhandari      
+      password: mBdAbcQiSbdyZWFcPAn2pMtQB2gX6goxgjArjshn2BdmhTfRfEFQRjn7uxDw
+      app_offline: true
+      NTLM: disabled
+      artifact: $(artifactName)
   
   
               
