@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiKey: '048c43a2f7e00f37c3b4044df2ec3128',
+  apiKey: 'cfc02467ca0667ffa32e0e81025788ab',
   defaultCity: 'Hyderabad'
 };
 
