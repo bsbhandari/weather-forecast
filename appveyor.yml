@@ -28,7 +28,7 @@
   # build Configuration, i.e. Debug, Release, etc.
   configuration: Debug      
   build_script:
-    - ng build
+    - ng build --prod
   # to run tests  
   test: off  
   after_build:
@@ -55,7 +55,7 @@
   - provider: Email  
     to:
     
-    - mbhakuni@rythmos.com       
+    - bsbhandari@live.com       
     message: "<div style=\"font-family:'Segoe UI',Arial,Sans-Serif;font-size:10pt;\">\n   {{#passed}} \n   <h1 style=\"font-size: 150%;font-weight:normal; color:#078DC7;\"><a href=\"{{buildUrl}}\" style=\"color:#078DC7;\">Build {{projectName}} {{buildVersion}} completed</a></h1>\n\n<ul>\n      {{#jobs}}    \n      <li><p> For details build log <a href=\"https://ci.appveyor.com/api/buildjobs/{{id}}/log\">click here</a></p></li>   \n      {{/jobs}}\n   </ul> \n\n   {{/passed}} {{#failed}} \n   <h1 style=\"font-size: 150%;font-weight:normal; color:#ff3228;\"><a href=\"{{buildUrl}}\" style=\"color:#ff3228;\">Build {{projectName}} {{buildVersion}} failed</a></h1>\n   <p>Build messages:</p>\n   <ul>\n      {{#jobs}}\n      {{#messages}}\n      <li>{{message}}</li>\n      {{/messages}}\n      {{/jobs}}\n   </ul>\n   {{/failed}} \n   <p style=\"color: #888;\"> Commit <a href=\"{{commitUrl}}\">{{commitId}}</a> by <a href=\"mailto:{{commitAuthorEmail}}\">{{commitAuthor}}</a> on {{commitDate}}: <br /> <span style=\"font-size: 110%;color:#222;\">{{commitMessage}}</span> </p>\n\n<p>Build messages:</p>\n   <ul>\n      {{#jobs}}\n      {{#messages}}\n      <li>{{message}}</li>\n      {{/messages}}\n      {{/jobs}}\n   </ul>\n\n<p>Appveyor log messages:</p>\n\n<table border=\"1\">\n{{#jobs}}\n<tr>\n<th>Category</th>\n<th>Message</th>\n<th>Details</th>\n<th>ProjectFileName</th>\n<th>FileName</th>\n<th>Line</th>\n<th>Column</th>\n\n</tr>\n{{#compilationMessages}}\n<tr>\n<td>{{category}}</td>\n<td>{{message}}</td>\n<td>{{details}}</td>\n<td>{{projectFileName}}</td>\n<td>{{fileName}}</td>\n<td>{{line}}</td>\n<td>{{column}}</td>\n</tr>\n{{/compilationMessages}}\n{{/jobs}}\n<tablel>\n\n</div>"
     
     on_build_success: true
