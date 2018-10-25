@@ -28,10 +28,6 @@ Develop a weather forecast app. Your application should fetch weather forecast f
 * production level Code; Beautify; Comment; Documented code; handle Input Exceptions, Unicode and Null values.
 * Lighthouse test/audit more than 90% for all areas.
 
-[Guide]
-* For Mock: Refer App Mock.png in this directory
-* API: Refer API.md file in this directory
-
 [Important]
 * IMPORTANT: Commit code intervally.
 * Share the git repo with the recruiter you are in contact with when you are done.
@@ -45,3 +41,6 @@ http://api.openweathermap.org/data/2.5/forecast?q=London&appid=********
 
 * Get Weather for 16 days / 1 forecsat per day
 http://api.openweathermap.org/data/2.5/forecast/daily?q=London&units=metric&cnt=16&appid=********
+
+
+[![Coverage Status](https://coveralls.io/repos/github/bsbhandari/weather-forecast/badge.svg?branch=master)](https://coveralls.io/github/bsbhandari/weather-forecast?branch=master)
