@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeekWeatherComponent } from './week-weather.component';
+import { routingComponents } from '../app.routing.module';
+import { HttpClient } from '@angular/common/http';
+import { WeatherForecastService } from '../weather-forecast/weather-forecast.service';
+import { SpyWeatherForecastServiceService } from 'src/testing/spy-services';
 
 describe('WeekWeatherComponent', () => {
   let component: WeekWeatherComponent;
@@ -8,9 +12,11 @@ describe('WeekWeatherComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WeekWeatherComponent ]
+      declarations: [WeekWeatherComponent, routingComponents],
+      providers: [{ provide: HttpClient, useValue: {} }, { provide: WeatherForecastService, useClass: SpyWeatherForecastServiceService }],
+      imports: []
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

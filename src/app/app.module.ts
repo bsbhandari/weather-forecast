@@ -27,15 +27,19 @@ export const MaterialModules = [
   MatExpansionModule,
 ];
 
+export const AppModules = [
+  BrowserAnimationsModule,
+  BrowserModule,
+  HttpClientModule,
+  AppRoutingModule,
+  MaterialModules, ReactiveFormsModule,
+  FormsModule
+];
+
 @NgModule({
   declarations: [AppComponent, routingComponents],
   imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    MaterialModules, ReactiveFormsModule,
-    FormsModule
+    AppModules
   ],
   providers: [customProviders],
   bootstrap: [AppComponent],

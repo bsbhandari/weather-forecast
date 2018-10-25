@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DayCloudComponent } from './day-cloud.component';
+import { routingComponents } from '../app.routing.module';
+import { HttpClient } from '@angular/common/http';
+import { WeatherForecastService } from '../weather-forecast/weather-forecast.service';
+import { SpyWeatherForecastServiceService } from 'src/testing/spy-services';
 
 describe('DayCloudComponent', () => {
   let component: DayCloudComponent;
@@ -8,9 +12,11 @@ describe('DayCloudComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DayCloudComponent ]
+      declarations: [DayCloudComponent, routingComponents],
+      providers: [{ provide: HttpClient, useValue: {} }, { provide: WeatherForecastService, useClass: SpyWeatherForecastServiceService }],
+      imports: []
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

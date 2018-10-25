@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MonthWeatherComponent } from './month-weather.component';
+import { routingComponents } from '../app.routing.module';
+import { HttpClient } from '@angular/common/http';
 
 describe('MonthWeatherComponent', () => {
   let component: MonthWeatherComponent;
@@ -8,9 +10,11 @@ describe('MonthWeatherComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MonthWeatherComponent ]
+      declarations: [MonthWeatherComponent, routingComponents],
+      providers: [{ provide: HttpClient, useValue: {} },],
+      imports: []
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
