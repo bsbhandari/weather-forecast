@@ -36,9 +36,7 @@
   artifacts:
     - path: '\dist'
       name: $(artifactName)
-      type: WebDeployPackage
-   
-    
+      type: WebDeployPackage    
    
   clone_depth: 1
   on_finish:
