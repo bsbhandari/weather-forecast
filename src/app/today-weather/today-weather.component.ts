@@ -6,7 +6,7 @@ import { WeatherForecastService } from '../weather-forecast/weather-forecast.ser
   templateUrl: './today-weather.component.html',
   styleUrls: ['./today-weather.component.scss']
 })
-export class TodayWeatherComponent implements OnInit {
+export class TodayWeatherComponent {
 
   todayData: any;
   constructor(private weatherForecastService: WeatherForecastService) {
@@ -14,8 +14,5 @@ export class TodayWeatherComponent implements OnInit {
       if (value)
         this.todayData = value[0];
     });
-  }
-
-  ngOnInit() {
   }
 }

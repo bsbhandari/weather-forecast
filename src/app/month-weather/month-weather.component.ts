@@ -6,7 +6,7 @@ import { WeatherForecastService } from '../weather-forecast/weather-forecast.ser
   templateUrl: './month-weather.component.html',
   styleUrls: ['./month-weather.component.scss']
 })
-export class MonthWeatherComponent implements OnInit {
+export class MonthWeatherComponent {
 
   monthData = [];
   constructor(private weatherForecastService: WeatherForecastService) {
@@ -14,12 +14,5 @@ export class MonthWeatherComponent implements OnInit {
       if (value)
         this.monthData = value;
     });
-  }
-
-  ngOnInit() {
-  }
-
-  setTodayWeatherData(value) {
-
   }
 }

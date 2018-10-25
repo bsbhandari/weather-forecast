@@ -28,4 +28,16 @@ describe('DayCloudComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return mdi mdi-weather-sunny class name with value 800', () => {
+    const value = { weather: [{ id: 800 }] };
+    const className = component.getClass(value);
+    expect(className).toEqual('mdi mdi-weather-sunny');
+  });
+
+  it('should return default class name with value 00', () => {
+    const value = { weather: [{ id: 1100 }] };
+    const className = component.getClass(value);
+    expect(className).toEqual('mdi mdi-weather-lightning');
+  });
 });

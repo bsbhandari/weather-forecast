@@ -6,7 +6,7 @@ import { WeatherForecastService } from '../weather-forecast/weather-forecast.ser
   templateUrl: './week-weather.component.html',
   styleUrls: ['./week-weather.component.scss']
 })
-export class WeekWeatherComponent implements OnInit {
+export class WeekWeatherComponent {
   weekData = [];
   constructor(private weatherForecastService: WeatherForecastService) {
     this.weatherForecastService.weatherData.subscribe((value) => {
@@ -16,8 +16,4 @@ export class WeekWeatherComponent implements OnInit {
       });
     });
   }
-
-  ngOnInit() {
-  }
-
 }

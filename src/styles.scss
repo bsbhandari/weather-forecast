@@ -97,6 +97,10 @@ body {
     }
 }
 
+  .router-outlet-wrapper{
+           height: auto;
+      }
+
 }
 
 /* Smartphones (portrait) ----------- */
@@ -127,6 +131,7 @@ body {
         float: left;
           width: 100%;
           padding: 20px;
+           height: auto;
           box-shadow: 1px 0px 46px #359fb9;
             .mat-tab-link.active {
                   border-bottom: 3px solid #5ecd90;

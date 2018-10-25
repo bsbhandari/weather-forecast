@@ -6,7 +6,7 @@ import { WeatherForecastService } from '../weather-forecast/weather-forecast.ser
   templateUrl: './day-cloud.component.html',
   styleUrls: ['./day-cloud.component.scss']
 })
-export class DayCloudComponent implements OnInit {
+export class DayCloudComponent {
 
   @Input() weatherData: any;
   weekData = [];
@@ -15,9 +15,6 @@ export class DayCloudComponent implements OnInit {
       if (value)
         this.weekData = value.slice(0, 5);
     });
-  }
-
-  ngOnInit() {
   }
 
   getClass(value) {
