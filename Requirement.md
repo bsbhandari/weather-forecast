@@ -19,7 +19,7 @@ Develop a weather forecast app. Your application should fetch weather forecast f
 * Use of proper design patterns and data structures
 * Use of task automators like Gulp, Grunt or WebPack
 * Use of SASS or LESS is highly appreciated
-* Awesome if your test coverage exceeds about 70% :)
+* Awesome if your test coverage exceeds about 70% :) 
   
 [Plus Points]
 * PWA Support
