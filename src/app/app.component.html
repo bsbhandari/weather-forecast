@@ -22,7 +22,7 @@
         <app-day-cloud [weatherData]="weatherData"></app-day-cloud>
         <nav mat-tab-nav-bar>
             <a mat-tab-link routerLink="/today" routerLinkActive #rla1="routerLinkActive" ngClass="{{rla1.isActive?'active':''}}">
-                Today </a>
+                @Today </a>
             <a mat-tab-link routerLink="/week" routerLinkActive #rla2="routerLinkActive" ngClass="{{rla2.isActive?'active':''}}">
                 Week </a>
             <a mat-tab-link routerLink="/month" routerLinkActive #rla3="routerLinkActive" ngClass="{{rla3.isActive?'active':''}}">
